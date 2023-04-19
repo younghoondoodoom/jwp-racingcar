@@ -42,7 +42,7 @@ public class RaceService {
         return raceResponse;
     }
 
-    private Cars run(RaceRequest raceRequest) {
+    private Cars run(final RaceRequest raceRequest) {
         final Race race = new Race(raceRequest.getCount());
         final Cars cars = makeCars(raceRequest.getCarNames());
         return race.run(cars);
