@@ -12,8 +12,8 @@ public class H2CarDao implements CarDao {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public H2CarDao(final DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public H2CarDao(final JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override

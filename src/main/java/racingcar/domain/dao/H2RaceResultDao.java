@@ -19,8 +19,8 @@ public class H2RaceResultDao implements RaceResultDao {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public H2RaceResultDao(final DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public H2RaceResultDao(final JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     private static Map<Long, RaceResultEntity> makeRaceResultEntities(
